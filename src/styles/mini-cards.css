@@ -1,0 +1,112 @@
+/* ==========================================================================
+   MINI FEATURE CARDS STYLES
+   ========================================================================== */
+
+.mini-cards-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 140px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.mini-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.mini-card {
+  height: 172px;
+  border-radius: 16px;
+  padding: 24px;
+  color: #FFFFFF;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  user-select: none;
+}
+
+.mini-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.2);
+}
+
+.mini-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mini-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.mini-card-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 13px;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.mini-card:hover .mini-card-arrow {
+  transform: translateX(3px);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.mini-card-desc {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  padding-right: 16px;
+}
+
+/* Gradients for each card */
+.mini-card.effects {
+  background: linear-gradient(to right, #FD6F03, #FD0820);
+}
+
+.mini-card.navigation {
+  background: linear-gradient(to right, #FE4790, #FE0A6C);
+}
+
+.mini-card.cms {
+  background: linear-gradient(to right, #9600FF, #6900FF);
+}
+
+.mini-card.site-mgmt {
+  background: linear-gradient(to right, #00C7FF, #0A84FF);
+}
+
+.mini-card.seo {
+  background: linear-gradient(to right, #21DCDB, #0FD7C2);
+}
+
+@media (max-width: 900px) {
+  .mini-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mini-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .mini-cards-section {
+    padding-bottom: 80px;
+  }
+}

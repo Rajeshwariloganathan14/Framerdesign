@@ -1,0 +1,176 @@
+/* ==========================================================================
+   DESIGN SYSTEM & GLOBAL STYLES (Framer Design & Layout Landing Page)
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Brand & Theme Colors */
+  --color-primary: #0099FF;
+  --color-primary-hover: #0088EE;
+  --color-primary-light: #EBF5FF;
+  --color-text-main: #111111;
+  --color-text-body: #444444;
+  --color-text-muted: #666666;
+  --color-text-subtle: #888888;
+  --color-border-light: #EBEBEB;
+  --color-border-subtle: #E2E8F0;
+  --color-bg-page: #FFF9EF;
+  --color-bg-white: #FFFFFF;
+  --color-dark-surface: #141517;
+  --color-dark-panel: #1A1D24;
+
+  /* Gradients */
+  --grad-hero: linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 255, 255) 22%, rgb(254, 231, 201) 38%, rgb(253, 231, 173) 55%, rgb(253, 210, 91) 78%, rgb(252, 186, 8) 100%);
+  --grad-cta: linear-gradient(135deg, rgb(0, 153, 255) 0%, rgb(153, 51, 255) 100%);
+  --grad-bento: linear-gradient(180deg, #FCBA08 0%, #FFF9EF 3.5%, #FFF9EF 94%, #FFFEFC 100%);
+  --grad-card-orange: linear-gradient(180deg, #FFAE02 0%, #FF7A00 50%, #FF4B14 100%);
+  --grad-card-amber: linear-gradient(180deg, #FEB800 0%, #FD7B01 100%);
+  --grad-card-dark: linear-gradient(180deg, #070707 0%, #4E4E4E 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-mockup: rgba(0, 0, 0, 0.18) 0px 25px 50px -12px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* CSS Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-main);
+  background: var(--grad-hero) fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+::selection {
+  background-color: #FEF3C7;
+  color: #78350F;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Typography Utilities */
+.serif-font {
+  font-family: var(--font-serif);
+}
+
+.mono-font {
+  font-family: var(--font-mono);
+}
+
+/* Ambient Radial Glows */
+.hero-glow-layer {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 950px;
+  height: 950px;
+  background: radial-gradient(circle, rgba(254, 231, 201, 0.75) 0%, rgba(254, 231, 201, 0.25) 50%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.peach-radial-glow {
+  position: absolute;
+  width: 800px;
+  height: 450px;
+  top: -120px;
+  left: -200px;
+  background: radial-gradient(ellipse at center, rgba(255, 233, 210, 0.95) 0%, rgba(255, 242, 227, 0.7) 40%, rgba(255, 251, 239, 0.4) 65%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+/* Diagonal Stripes pattern */
+.diagonal-stripes {
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35) 1.5px, transparent 1.5px, transparent 8px);
+}
+
+/* Blinking Cursor Keyframes */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 2.5px;
+  height: 1.1em;
+  background-color: #111111;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s infinite;
+}
+
+/* Container constraints */
+.container-1440 {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container-1240 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-900 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
