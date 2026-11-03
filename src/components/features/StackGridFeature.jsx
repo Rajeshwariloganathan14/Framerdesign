@@ -104,16 +104,22 @@ export default function StackGridFeature({ onTutorialClick }) {
         </div>
 
         {/* Inner Canvas Space & Grid Mockup */}
-        <div style={{ paddingTop: '80px', paddingLeft: '32px', paddingRight: '32px', height: '100%' }}>
-          <div style={{
-            position: 'relative',
-            width: '100%',
-            height: '460px',
-            border: '1px solid #0099FF',
-            borderRadius: '8px',
-            padding: '10px',
-            backgroundColor: 'rgba(249, 250, 251, 0.7)'
-          }}>
+        <div
+          className="stack-grid-canvas-wrap"
+          style={{ paddingTop: '80px', paddingLeft: '32px', paddingRight: '32px', height: '100%' }}
+        >
+          <div
+            className="stack-grid-canvas-inner"
+            style={{
+              position: 'relative',
+              width: '100%',
+              height: '460px',
+              border: '1px solid #0099FF',
+              borderRadius: '8px',
+              padding: '10px',
+              backgroundColor: 'rgba(249, 250, 251, 0.7)'
+            }}
+          >
             {/* Active Selection handles */}
             <div className="corner-handle corner-tl" />
             <div className="corner-handle corner-tr" />

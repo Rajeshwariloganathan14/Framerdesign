@@ -34,29 +34,36 @@ export default function PositioningFeature({ onTutorialClick }) {
       {/* Visual Card Showcase */}
       <div className="feature-card-showcase showcase-positioning">
         {/* Inner Website Canvas with Editorial Photography */}
-        <div style={{
-          width: '820px',
-          height: '350px',
-          backgroundColor: '#FFFFFF',
-          borderTopLeftRadius: '12px',
-          borderTopRightRadius: '12px',
-          boxShadow: 'var(--shadow-xl)',
-          position: 'relative',
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-          border: '1px solid rgba(0, 0, 0, 0.08)'
-        }}>
-          {/* Harper Carpenter Header */}
-          <div style={{
-            height: '64px',
-            padding: '0 32px',
+        <div
+          className="positioning-inner-canvas"
+          style={{
+            width: '100%',
+            maxWidth: '820px',
+            minHeight: '340px',
+            backgroundColor: '#FFFFFF',
+            borderTopLeftRadius: '12px',
+            borderTopRightRadius: '12px',
+            boxShadow: 'var(--shadow-xl)',
+            position: 'relative',
+            overflow: 'hidden',
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            borderBottom: '1px solid rgba(42, 160, 255, 0.6)',
-            backgroundColor: '#FFFFFF'
-          }}>
+            flexDirection: 'column',
+            border: '1px solid rgba(0, 0, 0, 0.08)'
+          }}
+        >
+          {/* Harper Carpenter Header */}
+          <div
+            className="positioning-harper-header"
+            style={{
+              height: '64px',
+              padding: '0 32px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              borderBottom: '1px solid rgba(42, 160, 255, 0.6)',
+              backgroundColor: '#FFFFFF'
+            }}
+          >
             <span className="serif-font" style={{ fontSize: '24px', letterSpacing: 'normal', color: '#000000', fontWeight: 600 }}>
               Harper Carpenter
             </span>
@@ -127,20 +134,23 @@ export default function PositioningFeature({ onTutorialClick }) {
           </div>
 
           {/* Floating Position Panel with Fixed Selector */}
-          <div style={{
-            position: 'absolute',
-            right: '24px',
-            top: '24px',
-            zIndex: 30,
-            width: '190px',
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            backdropFilter: 'blur(12px)',
-            borderRadius: '12px',
-            boxShadow: 'var(--shadow-xl)',
-            border: '1px solid #E5E7EB',
-            padding: '14px',
-            fontSize: '11px'
-          }}>
+          <div
+            className="positioning-floating-panel"
+            style={{
+              position: 'absolute',
+              right: '24px',
+              top: '24px',
+              zIndex: 30,
+              width: '190px',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              backdropFilter: 'blur(12px)',
+              borderRadius: '12px',
+              boxShadow: 'var(--shadow-xl)',
+              border: '1px solid #E5E7EB',
+              padding: '14px',
+              fontSize: '11px'
+            }}
+          >
             <span style={{ fontWeight: 600, color: '#374151', display: 'block', marginBottom: '8px' }}>Position</span>
             <div style={{
               position: 'relative',

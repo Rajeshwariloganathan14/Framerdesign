@@ -112,7 +112,7 @@ export default function Navbar({ onPublishClick }) {
       {/* Right Action Button */}
       <div className="header-actions">
         <button
-          className="publish-btn-gradient"
+          className="publish-btn-gradient desktop-publish-btn"
           onClick={() => onPublishClick && onPublishClick("Publish Your Site for Free")}
         >
           Publish your site for free

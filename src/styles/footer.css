@@ -93,11 +93,33 @@
 @media (max-width: 850px) {
   .footer-container {
     flex-direction: column;
-    gap: 48px;
+    gap: 40px;
+    padding: 0 20px;
   }
   .footer-col-1,
   .footer-col-2,
   .footer-col-3 {
     width: 100%;
+  }
+  .footer-col-1 {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer-container {
+    padding: 0 16px;
+    gap: 36px;
+  }
+  .footer-col-1 {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .footer-col-2 .footer-link-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 16px;
   }
 }

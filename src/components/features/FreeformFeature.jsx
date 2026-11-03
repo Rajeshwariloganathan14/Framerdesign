@@ -23,7 +23,8 @@ export default function FreeformFeature({ onTutorialClick }) {
       <div className="feature-card-showcase showcase-freeform">
         {/* Text Input Simulation Layer */}
         <div style={{
-          width: '640px',
+          width: '100%',
+          maxWidth: '640px',
           margin: '0 auto',
           borderTop: '1px solid #E5E7EB',
           borderBottom: '1px solid #E5E7EB',
@@ -31,29 +32,33 @@ export default function FreeformFeature({ onTutorialClick }) {
           display: 'flex',
           alignItems: 'center'
         }}>
-          <span style={{ fontSize: '54px', fontWeight: 500, letterSpacing: '-0.03em', color: '#000000', lineHeight: 1 }}>
+          <span style={{ fontSize: 'clamp(32px, 6vw, 54px)', fontWeight: 500, letterSpacing: '-0.03em', color: '#000000', lineHeight: 1 }}>
             Ship si
           </span>
-          <span className="blinking-cursor" style={{ height: '52px' }} />
+          <span className="blinking-cursor" style={{ height: '42px' }} />
         </div>
 
         {/* Video Canvas Object with Bounding Box & Play button */}
-        <div style={{
-          width: '640px',
-          margin: '0 auto',
-          height: '240px',
-          borderTopLeftRadius: '12px',
-          borderTopRightRadius: '12px',
-          background: 'linear-gradient(to right, #171717, #1c1917, #451a03)',
-          border: '2px solid var(--color-primary)',
-          position: 'relative',
-          overflow: 'hidden',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          boxShadow: 'var(--shadow-lg)',
-          marginBottom: '-32px'
-        }}>
+        <div
+          className="freeform-feature-canvas"
+          style={{
+            width: '100%',
+            maxWidth: '640px',
+            margin: '0 auto',
+            height: '240px',
+            borderTopLeftRadius: '12px',
+            borderTopRightRadius: '12px',
+            background: 'linear-gradient(to right, #171717, #1c1917, #451a03)',
+            border: '2px solid var(--color-primary)',
+            position: 'relative',
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: 'var(--shadow-lg)',
+            marginBottom: '-32px'
+          }}
+        >
           {/* Corner selection handles */}
           <div className="corner-handle corner-tl" />
           <div className="corner-handle corner-tr" />

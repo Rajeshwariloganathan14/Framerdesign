@@ -5,7 +5,7 @@ import PropertiesPanel from './PropertiesPanel';
 import '../../styles/editor.css';
 
 export default function EditorMockup({ onPublishClick, onTutorialClick }) {
-  const [layoutDropdownOpen, setLayoutDropdownOpen] = useState(true);
+  const [layoutDropdownOpen, setLayoutDropdownOpen] = useState(false);
   const [selectedTool, setSelectedTool] = useState('layout');
   const [selectedLayoutType, setSelectedLayoutType] = useState('frame');
   const [selectedLayer, setSelectedLayer] = useState('Desktop');
@@ -59,7 +59,7 @@ export default function EditorMockup({ onPublishClick, onTutorialClick }) {
 
           {/* Frame */}
           <button
-            className={`tool-btn ${selectedTool === 'frame' ? 'active' : ''}`}
+            className={`tool-btn tool-btn-frame ${selectedTool === 'frame' ? 'active' : ''}`}
             onClick={() => {
               setSelectedTool('frame');
               setLayoutDropdownOpen(false);
@@ -71,7 +71,7 @@ export default function EditorMockup({ onPublishClick, onTutorialClick }) {
 
           {/* Text */}
           <button
-            className={`tool-btn ${selectedTool === 'text' ? 'active' : ''}`}
+            className={`tool-btn tool-btn-text ${selectedTool === 'text' ? 'active' : ''}`}
             onClick={() => {
               setSelectedTool('text');
               setLayoutDropdownOpen(false);
@@ -83,7 +83,7 @@ export default function EditorMockup({ onPublishClick, onTutorialClick }) {
 
           {/* CMS */}
           <button
-            className={`tool-btn ${selectedTool === 'cms' ? 'active' : ''}`}
+            className={`tool-btn tool-btn-cms ${selectedTool === 'cms' ? 'active' : ''}`}
             onClick={() => {
               setSelectedTool('cms');
               setLayoutDropdownOpen(false);
@@ -105,7 +105,7 @@ export default function EditorMockup({ onPublishClick, onTutorialClick }) {
           </div>
 
           {/* Settings Gear */}
-          <button className="tool-btn" style={{ padding: '4px' }} title="Project Settings">
+          <button className="tool-btn tool-btn-settings" style={{ padding: '4px' }} title="Project Settings">
             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
               <circle cx="12" cy="12" r="3" strokeWidth="2" />
@@ -125,7 +125,7 @@ export default function EditorMockup({ onPublishClick, onTutorialClick }) {
           </button>
 
           {/* Invite */}
-          <button className="btn-invite" onClick={() => onPublishClick && onPublishClick("Invite Team Collaborators")}>
+          <button className="btn-invite tool-btn-invite" onClick={() => onPublishClick && onPublishClick("Invite Team Collaborators")}>
             Invite
           </button>
 

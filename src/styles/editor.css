@@ -579,3 +579,93 @@
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+  .editor-workspace {
+    min-height: auto;
+  }
+  .editor-canvas-center {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px;
+    gap: 24px;
+    overflow-x: hidden;
+  }
+  .artboard-col {
+    width: 100%;
+    max-width: 380px;
+    align-items: stretch;
+  }
+  .artboard-header {
+    width: 100%;
+  }
+  .artboard-desktop {
+    width: 100%;
+    min-height: auto;
+    padding: 16px 12px;
+  }
+  .artboard-mobile {
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    min-height: auto;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .editor-toolbar {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 8px;
+    gap: 4px;
+    overflow-x: hidden;
+  }
+  .tool-btn-frame,
+  .tool-btn-text,
+  .tool-btn-cms,
+  .tool-btn-invite,
+  .tool-btn-settings,
+  .avatar-group,
+  .toolbar-divider {
+    display: none !important;
+  }
+  .tool-btn {
+    padding: 4px 6px;
+    font-size: 11px;
+    gap: 4px;
+  }
+  .layout-dropdown-menu {
+    left: 8px;
+    top: 42px;
+    width: 180px;
+    max-width: calc(100vw - 32px);
+  }
+}
+
+@media (max-width: 480px) {
+  .editor-toolbar {
+    height: 38px;
+  }
+  .mock-nav-links {
+    display: none !important;
+  }
+  .mock-hero-heading {
+    font-size: 13px !important;
+    max-width: 210px !important;
+  }
+  .mock-hero-sub {
+    font-size: 7.5px !important;
+    max-width: 190px !important;
+  }
+  .mock-audio-widget {
+    padding: 6px;
+  }
+  .waveform-track {
+    height: 20px;
+  }
+  .artboard-mobile {
+    max-width: 210px !important;
+  }
+}

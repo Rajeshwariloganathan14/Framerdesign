@@ -23,11 +23,13 @@ export default function StylingFeature() {
       {/* Visual Card Showcase */}
       <div className="feature-card-showcase showcase-styling">
         {/* Canvas Artboard with Saturn Artwork */}
-        <div style={{
-          position: 'relative',
-          marginLeft: '32px',
-          width: '400px',
-          height: '340px',
+        <div
+          className="styling-saturn-card"
+          style={{
+            position: 'relative',
+            marginLeft: '32px',
+            width: '400px',
+            height: '340px',
           borderRadius: `${radius}px`,
           background: 'linear-gradient(to bottom, #FDA400, #FD7901)',
           border: '2px solid #0099FF',
@@ -64,9 +66,11 @@ export default function StylingFeature() {
         </div>
 
         {/* Dark Property Styles Panel (Framer Inspector) */}
-        <div style={{
-          width: '260px',
-          backgroundColor: '#1C1C1C',
+        <div
+          className="styling-inspector-card"
+          style={{
+            width: '260px',
+            backgroundColor: '#1C1C1C',
           color: 'rgba(255, 255, 255, 0.9)',
           borderRadius: '12px',
           padding: '14px',

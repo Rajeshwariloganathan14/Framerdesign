@@ -174,3 +174,35 @@ input {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.app-root,
+.homepage-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero-glow-layer {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vw;
+    top: -40px;
+  }
+
+  .peach-radial-glow {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    left: 0;
+    top: -60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-1240,
+  .container-900 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

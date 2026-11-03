@@ -36,62 +36,72 @@ export default function InsertFeature({ onTutorialClick }) {
       {/* Visual Card Showcase */}
       <div className="feature-card-showcase showcase-insert">
         {/* Inner Editor Modal */}
-        <div style={{
-          width: '820px',
-          height: '370px',
-          backgroundColor: '#FFFFFF',
-          borderTopLeftRadius: '12px',
-          borderTopRightRadius: '12px',
-          boxShadow: 'var(--shadow-xl)',
-          display: 'flex',
-          flexDirection: 'column',
-          overflow: 'hidden',
-          border: '1px solid rgba(0, 0, 0, 0.08)'
-        }}>
-          {/* Top Tool Menu */}
-          <div style={{
-            height: '40px',
-            borderBottom: '1px solid #E5E7EB',
-            padding: '0 16px',
+        <div
+          className="insert-feature-modal"
+          style={{
+            width: '100%',
+            maxWidth: '820px',
+            minHeight: '340px',
+            backgroundColor: '#FFFFFF',
+            borderTopLeftRadius: '12px',
+            borderTopRightRadius: '12px',
+            boxShadow: 'var(--shadow-xl)',
             display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-            backgroundColor: '#F9FAFB',
-            fontSize: '12px',
-            fontWeight: 500,
-            color: '#374151'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 8px', backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '4px', boxShadow: 'var(--shadow-sm)' }}>
+            flexDirection: 'column',
+            overflow: 'hidden',
+            border: '1px solid rgba(0, 0, 0, 0.08)'
+          }}
+        >
+          {/* Top Tool Menu */}
+          <div
+            className="insert-modal-toolbar"
+            style={{
+              height: '40px',
+              borderBottom: '1px solid #E5E7EB',
+              padding: '0 16px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '16px',
+              backgroundColor: '#F9FAFB',
+              fontSize: '12px',
+              fontWeight: 500,
+              color: '#374151'
+            }}
+          >
+            <div className="insert-tool-item tool-item-insert" style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 8px', backgroundColor: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '4px', boxShadow: 'var(--shadow-sm)' }}>
               <span style={{ color: '#111111', fontWeight: 700 }}>+</span> Insert
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280' }}>
+            <div className="insert-tool-item tool-item-layout" style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280' }}>
               <span>⊞</span> Layout
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280' }}>
+            <div className="insert-tool-item tool-item-frame" style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280' }}>
               <span>▢</span> Frame
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280' }}>
+            <div className="insert-tool-item tool-item-text" style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280' }}>
               <span>T</span> Text
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280' }}>
+            <div className="insert-tool-item tool-item-cms" style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280' }}>
               <span>❖</span> CMS
             </div>
           </div>
 
           {/* Body: Sidebar + Templates Shelf */}
-          <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+          <div className="insert-modal-body" style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
             {/* Sidebar Navigation */}
-            <div style={{
-              width: '210px',
-              borderRight: '1px solid #E5E7EB',
-              padding: '12px',
-              backgroundColor: '#FFFFFF',
-              fontSize: '11px',
-              color: '#4B5563',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '12px'
-            }}>
+            <div
+              className="insert-sidebar-nav"
+              style={{
+                width: '210px',
+                borderRight: '1px solid #E5E7EB',
+                padding: '12px',
+                backgroundColor: '#FFFFFF',
+                fontSize: '11px',
+                color: '#4B5563',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px'
+              }}
+            >
               <div>
                 <input
                   type="text"

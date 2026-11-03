@@ -460,17 +460,113 @@
 }
 
 @media (max-width: 768px) {
+  .bento-section {
+    padding-top: 56px;
+    padding-bottom: 80px;
+  }
+  .bento-container {
+    padding: 0 16px;
+  }
+  .bento-heading-block {
+    margin-bottom: 36px;
+  }
+  .bento-title {
+    font-size: clamp(28px, 6.5vw, 42px);
+  }
+  .bento-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
   .bento-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    gap: 16px;
   }
   .bento-card {
-    height: 460px;
+    height: auto;
+    min-height: 420px;
+    border-radius: 16px;
   }
   .bento-card-tall {
-    height: 480px;
+    height: 460px;
   }
   .col-span-2 {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .bento-container {
+    padding: 0 12px;
+  }
+  .bento-card {
+    min-height: 380px;
+  }
+  .bento-card-header {
+    padding: 18px 16px 8px 16px;
+  }
+  .bento-card-title {
+    font-size: 17px;
+  }
+  .bento-card-sub {
+    font-size: 12px;
+  }
+  .bento-inset {
+    margin: 0 12px 14px 12px;
+  }
+  .freeform-text-bar {
+    min-height: 48px;
+    padding: 0 4px;
+  }
+  .freeform-ship-text {
+    font-size: 32px;
+  }
+  .freeform-video-box {
+    height: 180px;
+  }
+  .play-button-circle {
+    width: 52px;
+    height: 52px;
+  }
+  .insert-split-box {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .sidebar-orange-panel {
+    padding: 16px;
+    min-height: 190px;
+  }
+  .salmon-stripes-panel {
+    display: none;
+  }
+  .pinning-position-widget {
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  .harper-nav {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+  .harper-portrait-1 {
+    width: 62% !important;
+    max-width: 190px !important;
+    height: 160px !important;
+    margin-left: 8px !important;
+  }
+  .harper-portrait-2 {
+    width: 56% !important;
+    max-width: 160px !important;
+    height: 140px !important;
+    right: 8px !important;
+    bottom: -4px !important;
+  }
+  .breakpoint-phone-mock {
+    width: 76px !important;
+    height: 135px !important;
+  }
+  .saturn-visual-box {
+    margin-left: 12px;
+  }
+  .saturn-amber-tile {
+    height: 220px;
   }
 }

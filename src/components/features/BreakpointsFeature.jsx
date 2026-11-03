@@ -32,10 +32,12 @@ export default function BreakpointsFeature({ onTutorialClick }) {
 
       {/* Visual Card Showcase */}
       <div className="feature-card-showcase showcase-breakpoints">
-        <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-end', transform: 'translateY(16px)' }}>
+        <div className="breakpoints-showcase-stage" style={{ display: 'flex', gap: '16px', alignItems: 'flex-end', transform: 'translateY(16px)' }}>
           {/* Breakpoint Left: Desktop preview */}
-          <div style={{
-            width: '270px',
+          <div
+            className="breakpoint-desktop-card"
+            style={{
+              width: '270px',
             backgroundColor: '#17171C',
             borderTopLeftRadius: '16px',
             borderTopRightRadius: '16px',
@@ -87,8 +89,10 @@ export default function BreakpointsFeature({ onTutorialClick }) {
           </div>
 
           {/* Breakpoint Center: Tablet (Active 1199px) */}
-          <div style={{
-            width: '320px',
+          <div
+            className="breakpoint-tablet-card"
+            style={{
+              width: '320px',
             backgroundColor: '#17171C',
             borderTopLeftRadius: '16px',
             borderTopRightRadius: '16px',
@@ -146,8 +150,10 @@ export default function BreakpointsFeature({ onTutorialClick }) {
           </div>
 
           {/* Breakpoint Right: Mobile preview */}
-          <div style={{
-            width: '260px',
+          <div
+            className="breakpoint-mobile-card"
+            style={{
+              width: '260px',
             backgroundColor: '#17171C',
             borderTopLeftRadius: '16px',
             borderTopRightRadius: '16px',

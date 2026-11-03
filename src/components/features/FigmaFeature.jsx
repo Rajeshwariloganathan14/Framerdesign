@@ -33,11 +33,16 @@ export default function FigmaFeature({ onTutorialClick }) {
 
       {/* Visual Card Showcase */}
       <div className="feature-card-showcase showcase-figma">
-        <div style={{ position: 'relative', width: '780px', height: '350px', display: 'flex', alignItems: 'flex-end' }}>
+        <div
+          className="figma-showcase-stage"
+          style={{ position: 'relative', width: '100%', maxWidth: '780px', height: '350px', display: 'flex', alignItems: 'flex-end' }}
+        >
           {/* Left Figma Panel */}
-          <div style={{
-            width: '260px',
-            height: '340px',
+          <div
+            className="figma-layers-panel"
+            style={{
+              width: '260px',
+              height: '340px',
             backgroundColor: '#2B2B2B',
             borderTopLeftRadius: '12px',
             borderTopRightRadius: '12px',
@@ -94,9 +99,11 @@ export default function FigmaFeature({ onTutorialClick }) {
           </div>
 
           {/* Right Overlapping Framer Browser Window */}
-          <div style={{
-            width: '580px',
-            height: '340px',
+          <div
+            className="figma-browser-window"
+            style={{
+              width: '580px',
+              height: '340px',
             backgroundColor: '#FFFFFF',
             borderTopLeftRadius: '12px',
             borderTopRightRadius: '12px',

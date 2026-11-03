@@ -41,17 +41,20 @@ export default function CardPositioning({ onClick }) {
           {/* Content Area with overlapping portraits */}
           <div className="harper-portraits-stage">
             {/* Portrait 1: Man in dark tracksuit against orange background */}
-            <div style={{
-              width: '280px',
-              height: '220px',
-              borderTopLeftRadius: '10px',
-              borderTopRightRadius: '10px',
-              overflow: 'hidden',
-              marginLeft: '24px',
-              boxShadow: 'var(--shadow-md)',
-              position: 'relative',
-              backgroundColor: '#FF7700'
-            }}>
+            <div
+              className="harper-portrait-1"
+              style={{
+                width: '280px',
+                height: '220px',
+                borderTopLeftRadius: '10px',
+                borderTopRightRadius: '10px',
+                overflow: 'hidden',
+                marginLeft: '24px',
+                boxShadow: 'var(--shadow-md)',
+                position: 'relative',
+                backgroundColor: '#FF7700'
+              }}
+            >
               <img
                 src={editorialPortrait1}
                 alt="Tracksuit Model"
@@ -63,21 +66,24 @@ export default function CardPositioning({ onClick }) {
             </div>
 
             {/* Portrait 2: Woman with afro overlapping lower right */}
-            <div style={{
-              width: '240px',
-              height: '190px',
-              borderTopLeftRadius: '10px',
-              borderTopRightRadius: '10px',
-              overflow: 'hidden',
-              position: 'absolute',
-              right: '48px',
-              bottom: '-8px',
-              boxShadow: 'var(--shadow-xl)',
-              borderTop: '2px solid #FFFFFF',
-              borderLeft: '2px solid #FFFFFF',
-              backgroundColor: '#1A1A1A',
-              zIndex: 10
-            }}>
+            <div
+              className="harper-portrait-2"
+              style={{
+                width: '240px',
+                height: '190px',
+                borderTopLeftRadius: '10px',
+                borderTopRightRadius: '10px',
+                overflow: 'hidden',
+                position: 'absolute',
+                right: '48px',
+                bottom: '-8px',
+                boxShadow: 'var(--shadow-xl)',
+                borderTop: '2px solid #FFFFFF',
+                borderLeft: '2px solid #FFFFFF',
+                backgroundColor: '#1A1A1A',
+                zIndex: 10
+              }}
+            >
               <img
                 src={editorialPortrait2}
                 alt="Editorial Portrait"

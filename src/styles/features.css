@@ -7,6 +7,8 @@
   margin: 0 auto;
   padding-top: 80px;
   padding-bottom: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   gap: 140px;
@@ -16,6 +18,7 @@
 .feature-block {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .feature-text-header {
@@ -23,7 +26,7 @@
 }
 
 .feature-heading {
-  font-size: clamp(38px, 4.5vw, 50px);
+  font-size: clamp(28px, 5.5vw, 50px);
   line-height: 1.1;
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -32,7 +35,7 @@
 }
 
 .feature-desc {
-  font-size: clamp(17px, 1.8vw, 20px);
+  font-size: clamp(15px, 3.2vw, 20px);
   line-height: 1.6;
   color: #111111;
   font-weight: 400;
@@ -211,13 +214,212 @@
 
 @media (max-width: 900px) {
   .features-container {
-    gap: 80px;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    gap: 90px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .feature-card-showcase {
     margin-top: 32px;
     height: auto !important;
-    min-height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Stack and Grid Showcase */
+  .showcase-stack-grid {
+    height: auto !important;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .layout-floating-panel {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .stack-grid-canvas-wrap {
+    padding: 0 !important;
+    height: auto !important;
+  }
+  .stack-grid-canvas-inner {
+    height: 320px !important;
+  }
+
+  /* 2. Freeform Showcase */
+  .showcase-freeform {
+    height: auto !important;
+    padding: 24px 16px;
+  }
+
+  /* 3. Figma Showcase */
+  .showcase-figma {
+    height: auto !important;
+    padding: 20px 12px;
+  }
+  .figma-showcase-stage {
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+    gap: 16px;
+  }
+  .figma-layers-panel {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+  }
+  .figma-browser-window {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    height: auto !important;
+    min-height: 280px;
+  }
+
+  /* 4. Breakpoints Showcase */
+  .showcase-breakpoints {
+    height: auto !important;
+    padding: 24px 12px 0 12px;
+  }
+  .breakpoints-showcase-stage {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* 5. Insert Showcase */
+  .showcase-insert {
+    height: auto !important;
+    padding: 20px 12px;
+  }
+  .insert-feature-modal {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 320px;
+  }
+
+  /* 6. Pinning Showcase */
+  .showcase-pinning {
+    height: auto !important;
+    padding: 20px 12px;
+  }
+  .pinning-inner-canvas {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 320px;
+  }
+
+  /* 7. Styling Showcase */
+  .showcase-styling {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 24px 16px;
+    gap: 20px;
+    align-items: center;
+  }
+  .styling-saturn-card {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin-left: 0 !important;
+    height: 270px !important;
+    padding: 16px !important;
+  }
+  .styling-inspector-card {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin-right: 0 !important;
+  }
+
+  /* 8. Positioning Showcase */
+  .showcase-positioning {
+    height: auto !important;
+    padding: 20px 12px;
+  }
+  .positioning-inner-canvas {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 320px;
+  }
+
+  /* 4. Breakpoints Showcase at Tablet & Below */
+  .breakpoints-showcase-stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center;
+  }
+  .breakpoint-desktop-card {
+    display: none !important;
+  }
+  .breakpoint-tablet-card {
+    width: 58% !important;
+    max-width: 320px !important;
+    height: 380px !important;
+  }
+  .breakpoint-mobile-card {
+    width: 38% !important;
+    max-width: 240px !important;
+    height: 350px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-container {
+    gap: 70px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 36px;
+    padding-bottom: 60px;
+  }
+  .breakpoint-tablet-card {
+    width: 60% !important;
+    min-width: 140px !important;
+    height: 350px !important;
+    padding: 12px !important;
+  }
+  .breakpoint-mobile-card {
+    width: 40% !important;
+    min-width: 110px !important;
+    height: 330px !important;
+    padding: 8px !important;
+  }
+  .insert-sidebar-nav {
+    display: none !important;
+  }
+  .insert-modal-toolbar {
+    padding: 0 8px !important;
+    gap: 8px !important;
+  }
+  .insert-modal-toolbar .tool-item-frame,
+  .insert-modal-toolbar .tool-item-text,
+  .insert-modal-toolbar .tool-item-cms {
+    display: none !important;
+  }
+  .pinning-floating-panel,
+  .positioning-floating-panel {
+    transform: scale(0.8);
+    transform-origin: top right;
+    right: 8px !important;
+    top: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-heading {
+    margin-bottom: 16px;
+  }
+  .feature-desc {
+    margin-bottom: 20px;
+  }
+  .tutorial-btn {
+    padding: 6px 12px;
+  }
+  .tutorial-title {
+    font-size: 13px;
+  }
+  .showcase-freeform {
+    padding: 16px 10px;
   }
 }

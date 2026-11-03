@@ -34,19 +34,23 @@ export default function PinningFeature({ onTutorialClick }) {
       {/* Visual Card Showcase */}
       <div className="feature-card-showcase showcase-pinning">
         {/* Inner Cafe Page Canvas with Pin Guides */}
-        <div style={{
-          width: '820px',
-          height: '360px',
-          backgroundColor: '#FFFFFF',
-          borderTopLeftRadius: '12px',
-          borderTopRightRadius: '12px',
-          boxShadow: 'var(--shadow-xl)',
-          position: 'relative',
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-          border: '1px solid rgba(0, 0, 0, 0.08)'
-        }}>
+        <div
+          className="pinning-inner-canvas"
+          style={{
+            width: '100%',
+            maxWidth: '820px',
+            minHeight: '340px',
+            backgroundColor: '#FFFFFF',
+            borderTopLeftRadius: '12px',
+            borderTopRightRadius: '12px',
+            boxShadow: 'var(--shadow-xl)',
+            position: 'relative',
+            overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            border: '1px solid rgba(0, 0, 0, 0.08)'
+          }}
+        >
           {/* Guide lines */}
           <div style={{ position: 'absolute', left: 0, right: 0, top: '64px', borderBottom: '1px solid #0099FF', zIndex: 10 }} />
           <div style={{ position: 'absolute', top: 0, bottom: 0, left: '33.3%', borderRight: '1px solid #0099FF', zIndex: 10 }} />
@@ -70,20 +74,23 @@ export default function PinningFeature({ onTutorialClick }) {
           </div>
 
           {/* Floating Position Panel */}
-          <div style={{
-            position: 'absolute',
-            right: '24px',
-            top: '24px',
-            zIndex: 30,
-            width: '180px',
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            backdropFilter: 'blur(12px)',
-            borderRadius: '12px',
-            boxShadow: 'var(--shadow-xl)',
-            border: '1px solid #E5E7EB',
-            padding: '12px',
-            fontSize: '11px'
-          }}>
+          <div
+            className="pinning-floating-panel"
+            style={{
+              position: 'absolute',
+              right: '24px',
+              top: '24px',
+              zIndex: 30,
+              width: '180px',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              backdropFilter: 'blur(12px)',
+              borderRadius: '12px',
+              boxShadow: 'var(--shadow-xl)',
+              border: '1px solid #E5E7EB',
+              padding: '12px',
+              fontSize: '11px'
+            }}
+          >
             <span style={{ fontWeight: 600, color: '#374151', display: 'block', marginBottom: '8px' }}>Position</span>
             <div style={{
               position: 'relative',

@@ -50,8 +50,8 @@ export default function CardFreeform({ onClick }) {
 
           <div style={{
             position: 'absolute',
-            left: '-40px',
-            right: '-40px',
+            left: 0,
+            right: 0,
             top: 0,
             height: '200px',
             transform: 'rotate(15deg)',

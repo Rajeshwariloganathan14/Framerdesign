@@ -73,36 +73,42 @@ export default function CardBreakpoints({ onClick }) {
 
             {/* Two Phone Mockups Side-by-Side */}
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', paddingTop: '8px' }}>
-              <div style={{
-                width: '90px',
-                height: '170px',
-                backgroundColor: '#1E2024',
-                borderTopLeftRadius: '12px',
-                borderTopRightRadius: '12px',
-                border: '1px solid #3F3F46',
-                padding: '6px',
-                boxShadow: 'var(--shadow-md)',
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
+              <div
+                className="breakpoint-phone-mock"
+                style={{
+                  width: '90px',
+                  height: '170px',
+                  backgroundColor: '#1E2024',
+                  borderTopLeftRadius: '12px',
+                  borderTopRightRadius: '12px',
+                  border: '1px solid #3F3F46',
+                  padding: '6px',
+                  boxShadow: 'var(--shadow-md)',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+              >
                 <div style={{ width: '32px', height: '4px', backgroundColor: '#52525B', borderRadius: '2px', margin: '0 auto 8px' }} />
                 <div style={{ width: '100%', height: '32px', backgroundColor: 'rgba(234, 88, 12, 0.3)', borderRadius: '4px', marginBottom: '6px' }} />
                 <div style={{ width: '75%', height: '8px', backgroundColor: '#52525B', borderRadius: '2px', marginBottom: '4px' }} />
                 <div style={{ width: '50%', height: '8px', backgroundColor: '#3F3F46', borderRadius: '2px' }} />
               </div>
 
-              <div style={{
-                width: '90px',
-                height: '170px',
-                backgroundColor: '#1E2024',
-                borderTopLeftRadius: '12px',
-                borderTopRightRadius: '12px',
-                border: '1px solid #3F3F46',
-                padding: '6px',
-                boxShadow: 'var(--shadow-md)',
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
+              <div
+                className="breakpoint-phone-mock"
+                style={{
+                  width: '90px',
+                  height: '170px',
+                  backgroundColor: '#1E2024',
+                  borderTopLeftRadius: '12px',
+                  borderTopRightRadius: '12px',
+                  border: '1px solid #3F3F46',
+                  padding: '6px',
+                  boxShadow: 'var(--shadow-md)',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+              >
                 <div style={{ width: '32px', height: '4px', backgroundColor: '#52525B', borderRadius: '2px', margin: '0 auto 8px' }} />
                 <div style={{ width: '100%', height: '32px', backgroundColor: 'rgba(37, 99, 235, 0.3)', borderRadius: '4px', marginBottom: '6px' }} />
                 <div style={{ width: '75%', height: '8px', backgroundColor: '#52525B', borderRadius: '2px', marginBottom: '4px' }} />

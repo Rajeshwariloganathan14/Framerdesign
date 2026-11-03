@@ -13,12 +13,13 @@ export default function BentoSection({ onCardClick }) {
   return (
     <section className="bento-section" data-purpose="feature-bento-grid">
       {/* Ambient Radial Glows */}
-      <div style={{
+      <div className="bento-ambient-glow" style={{
         position: 'absolute',
         top: 0,
         left: '50%',
         transform: 'translateX(-50%)',
-        width: '950px',
+        width: '100%',
+        maxWidth: '950px',
         height: '480px',
         background: 'radial-gradient(ellipse at center, rgba(255, 237, 208, 0.85) 0%, rgba(254, 248, 237, 0.4) 55%, rgba(255, 249, 239, 0) 75%)',
         pointerEvents: 'none',
